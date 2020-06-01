@@ -1,0 +1,34 @@
+﻿<Properties StartupConfiguration="{4FB8E3A2-5846-4A89-A2A3-143CB4D9E914}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GameServer/Message.cs">
+    <Files>
+      <File FileName="GameClient/Client.cs" Line="25" Column="42" />
+      <File FileName="GameClient/Properties/PublishProfiles/FolderProfile.pubxml" Line="1" Column="1" />
+      <File FileName="GameClient/Message.cs" Line="19" Column="29" />
+      <File FileName="GameServer/Server.cs" Line="61" Column="62" />
+      <File FileName="GameServer/Message.cs" Line="10" Column="17" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ATankGame" expanded="True">
+            <Node name="GameClient" expanded="True">
+              <Node name="Properties" expanded="True">
+                <Node name="PublishProfiles" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="GameServer" expanded="True">
+              <Node name="Message.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.GameServer PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

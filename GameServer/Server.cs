@@ -36,22 +36,21 @@ namespace GameServer
             //clientSocket.Close();
             //serverSocket.Close();
         }
+        static Message msg = new Message();
 
         static void AcceptCallBack(IAsyncResult ar)
         {
             Socket serverSocket = ar.AsyncState as Socket;
             Socket clientSocket = serverSocket.EndAccept(ar);
 
-
             //Send a message to client
-            string msg = "Hello Client!";
-            byte[] data = Encoding.UTF8.GetBytes(msg);
+            string msgStr = "Hello Client!";
+            byte[] data = Encoding.UTF8.GetBytes(msgStr);
             clientSocket.Send(data);
-            clientSocket.BeginReceive(dataBuffer, 0, 1024, SocketFlags.None, RecevieCallBack, clientSocket);
+            clientSocket.BeginReceive(msg.Data, msg.StartIndex, msg.RemainSize, SocketFlags.None, RecevieCallBack, clientSocket);
             serverSocket.BeginAccept(AcceptCallBack, serverSocket);
 
         }
-
         static void RecevieCallBack(IAsyncResult ar)
         {
             Socket clientSocket = ar.AsyncState as Socket;
@@ -65,9 +64,11 @@ namespace GameServer
                     clientSocket.Close();
                     return;
                 }
-                string msg = Encoding.UTF8.GetString(dataBuffer, 0, count);
-                Console.WriteLine("recevied:" + msg);
-                clientSocket.BeginReceive(dataBuffer, 0, 1024, SocketFlags.None, RecevieCallBack, clientSocket);
+                msg.AddCount(count);
+                msg.ReadMessage();
+                //string msgStr = Encoding.UTF8.GetString(dataBuffer, 0, count);
+                //Console.WriteLine("recevied:" + msgStr);
+                clientSocket.BeginReceive(msg.Data, msg.StartIndex, msg.RemainSize, SocketFlags.None, RecevieCallBack, clientSocket);
             }
             catch (Exception ex)
             {

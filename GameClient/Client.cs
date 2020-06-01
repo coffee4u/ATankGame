@@ -17,19 +17,25 @@ namespace GameClient
             string msg = Encoding.UTF8.GetString(data, 0, count);
             Console.WriteLine(msg);
 
-            while (true)
+            for (int i = 0; i <= 100; i++)
             {
-                string s = Console.ReadLine();
-                if(s == "c")
-                {
-                    clientSocket.Close();
-                    return;
-                }
-                clientSocket.Send(Encoding.UTF8.GetBytes(s));
+                clientSocket.Send(Message.GetBytes(i.ToString()));
             }
+            string s = Console.ReadLine();
+            if (s == "c")
+            {
+                clientSocket.Close();
+                return;
+            }
+            //while (true)
+            //{
 
-            Console.ReadKey();
-            clientSocket.Close();
+                
+                
+            //}
+
+            //Console.ReadKey();
+            //clientSocket.Close();
         }
     }
 }
