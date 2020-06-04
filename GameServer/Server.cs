@@ -2,6 +2,7 @@
 using System.Net.Sockets;
 using System.Net;
 using System.Text;
+using MySql.Data.MySqlClient;
 
 namespace GameServer
 {
@@ -11,8 +12,56 @@ namespace GameServer
 
         static void Main(string[] args)
         {
-            StartServerAsync();
+            TestMySql();
+            //StartServerAsync();
             Console.ReadKey();
+        }
+
+        static void TestMySql()
+        {
+            string connStr = "database=test007;datasource=127.0.0.1;port=3306;user=root;pwd=Cb080200;";
+            MySqlConnection conn = new MySqlConnection(connStr);
+
+            conn.Open();
+
+            #region Update
+            //MySqlCommand cmd = new MySqlCommand("update user set password = @pwd where id = 1", conn);
+            //cmd.Parameters.AddWithValue("pwd", "sikiedu.com");
+            //cmd.ExecuteNonQuery();
+            #endregion
+
+            #region Delete
+            //MySqlCommand cmd = new MySqlCommand("delete from user where id = @id", conn);
+            //cmd.Parameters.AddWithValue("id", 1);
+            //cmd.ExecuteNonQuery();
+            #endregion
+
+            #region Insert
+            //string username = "cwer";
+            //string password = "lcker";
+            //MySqlCommand cmd = new MySqlCommand("insert into user set username=@un,password=@pwd", conn);
+            //cmd.Parameters.AddWithValue("un", username);
+            //cmd.Parameters.AddWithValue("pwd", password);
+            //cmd.ExecuteNonQuery();
+            #endregion
+
+            #region Search
+            //MySqlCommand cmd = new MySqlCommand("select * from user", conn);
+
+            //MySqlDataReader reader = cmd.ExecuteReader();
+            //while (reader.HasRows && reader.Read())
+            //{
+            //    ;
+            //    string username = reader.GetString("username");
+            //    string password = reader.GetString("password");
+            //    Console.WriteLine(username + ":" + password);
+            //}
+
+            //reader.Close();
+            #endregion
+
+            conn.Close();
+
         }
 
         static void StartServerAsync()
