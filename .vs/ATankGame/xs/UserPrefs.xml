@@ -1,28 +1,32 @@
 ﻿<Properties StartupConfiguration="{4FB8E3A2-5846-4A89-A2A3-143CB4D9E914}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="GameServer/Server/Server.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GameServer/Controller/ControllerManager.cs">
     <Files>
       <File FileName="GameClient/Client.cs" Line="4" Column="19" />
       <File FileName="GameClient/Properties/PublishProfiles/FolderProfile.pubxml" />
       <File FileName="GameClient/Message.cs" Line="1" Column="1" />
       <File FileName="GameServer/Server.cs" Line="9" Column="18" />
-      <File FileName="GameServer/Controller/BaseController.cs" Line="1" Column="1" />
+      <File FileName="GameServer/Controller/BaseController.cs" Line="10" Column="48" />
       <File FileName="GameServer/Server/Client.cs" Line="11" Column="24" />
       <File FileName="GameServer/Server/Server.cs" Line="56" Column="2" />
+      <File FileName="Common/Class1.cs" Line="8" Column="1" />
+      <File FileName="Common/ActionCode.cs" Line="6" Column="14" />
+      <File FileName="GameServer/Controller/ControllerManager.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ATankGame" expanded="True">
+            <Node name="Common" expanded="True" />
             <Node name="GameClient" expanded="True">
               <Node name="Properties" expanded="True">
                 <Node name="PublishProfiles" expanded="True" />
               </Node>
             </Node>
             <Node name="GameServer" expanded="True">
-              <Node name="Controller" expanded="True" />
-              <Node name="Server" expanded="True">
-                <Node name="Server.cs" selected="True" />
+              <Node name="Controller" expanded="True">
+                <Node name="ControllerManager.cs" selected="True" />
               </Node>
+              <Node name="Server" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -35,5 +39,6 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Common FirstBuild="True" />
   <MultiItemStartupConfigurations />
 </Properties>

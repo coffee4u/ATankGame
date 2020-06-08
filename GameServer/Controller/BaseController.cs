@@ -1,10 +1,12 @@
 ﻿using System;
+using Common;
+
 namespace GameServer.Controller
 {
-    public class BaseController
+    abstract class BaseController
     {
-        public BaseController()
-        {
-        }
+        RequestCode requestCode = RequestCode.None;
+
+        public virtual void DefaultHandle() { }
     }
 }
