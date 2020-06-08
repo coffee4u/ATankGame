@@ -8,4 +8,10 @@
   <ItemGroup>
     <PackageReference Include="MySql.Data" Version="8.0.20" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controller\" />
+    <Folder Include="DAO\" />
+    <Folder Include="Model\" />
+    <Folder Include="Server\" />
+  </ItemGroup>
 </Project>

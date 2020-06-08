@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Text;
-namespace GameServer
+namespace GameServer.Server
 {
     public class Message
     {
