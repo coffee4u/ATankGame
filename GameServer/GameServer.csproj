@@ -12,7 +12,8 @@
     <Folder Include="Controller\" />
     <Folder Include="DAO\" />
     <Folder Include="Model\" />
-    <Folder Include="Server\" />
+    <Folder Include="Servers\" />
+    <Folder Include="Tool\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj" />
