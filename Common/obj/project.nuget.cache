@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "p3crZJ2E5lCrat71095SWQYljiQaq0PzmOrM6vjnH1tDOIXm/G8MEGWjWf3WuCOfMd5L9QaB0EqZCfBL5pcDpg==",
+  "dgSpecHash": "H9LgMuGYGfJmhXSyUHMK0Qg37aEDD33k2ojDEnE4w+DaiMH8414KRXk+9JJmavX17KHYyogkKnzesf936fweCA==",
   "success": true,
   "projectFilePath": "/Users/binchen/Work/ATankGame/Common/Common.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/binchen/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/Users/binchen/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

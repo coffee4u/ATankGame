@@ -7,7 +7,7 @@ public class GameRoot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        UIManager.Instance.PushPanel(UIPanelType.MainMenu);
+        //UIManager.Instance.PushPanel(UIPanelType.MainMenu);
     }
 
 

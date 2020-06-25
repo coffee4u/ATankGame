@@ -3,6 +3,7 @@ using System.Net.Sockets;
 using System.Net;
 using System.Text;
 using MySql.Data.MySqlClient;
+using GameServer.Servers;
 
 namespace GameServer
 {
@@ -15,6 +16,7 @@ namespace GameServer
             //TestMySql();
             //StartServerAsync();
             //Console.ReadKey();
+            Server server = new Server("127.0.0.1", 6688);
         }
 
         //static void TestMySql()

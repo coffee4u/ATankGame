@@ -33,7 +33,7 @@ public class UIManager : BaseManager
     private Dictionary<UIPanelType, BasePanel> panelDict;
     private Stack<BasePanel> panelStack;
 
-    private UIManager()
+    public UIManager()
     {
         ParseUIPanelTypeJson();
     }

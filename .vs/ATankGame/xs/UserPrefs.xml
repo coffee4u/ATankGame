@@ -1,26 +1,27 @@
 ﻿<Properties StartupConfiguration="{4FB8E3A2-5846-4A89-A2A3-143CB4D9E914}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="GameClient/Client.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Common/ActionCode.cs">
     <Files>
       <File FileName="GameClient/Client.cs" Line="4" Column="19" />
       <File FileName="GameClient/Properties/PublishProfiles/FolderProfile.pubxml" />
       <File FileName="GameClient/Message.cs" />
       <File FileName="GameServer/Controller/BaseController.cs" />
-      <File FileName="Common/ActionCode.cs" />
+      <File FileName="Common/ActionCode.cs" Line="6" Column="14" />
       <File FileName="GameServer/Controller/ControllerManager.cs" />
       <File FileName="GameServer/Controller/DefaultController.cs" />
-      <File FileName="GameServer/Servers/Message.cs" />
+      <File FileName="GameServer/Servers/Message.cs" Line="63" Column="10" />
       <File FileName="GameServer/Tool/ConnHelper.cs" />
+      <File FileName="GameServer/Program.cs" Line="19" Column="39" />
+      <File FileName="Common/RequestCode.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ATankGame" expanded="True">
-            <Node name="Common" expanded="True" />
+            <Node name="Common" expanded="True" selected="True" />
             <Node name="GameClient" expanded="True">
               <Node name="Properties" expanded="True">
                 <Node name="PublishProfiles" expanded="True" />
               </Node>
-              <Node name="Client.cs" selected="True" />
             </Node>
             <Node name="GameServer" expanded="True">
               <Node name="Servers" expanded="True" />
@@ -37,6 +38,5 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Common FirstBuild="True" />
   <MultiItemStartupConfigurations />
 </Properties>
