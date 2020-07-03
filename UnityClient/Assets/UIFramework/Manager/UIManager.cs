@@ -15,7 +15,10 @@ public class UIManager : BaseManager
     //        return _instance;
     //    }
     //}
-
+    public UIManager(GameFacade facade) : base(facade)
+    {
+        ParseUIPanelTypeJson();
+    }
     private Transform canvasTransform;
     private Transform CanvasTransform
     {
@@ -33,10 +36,10 @@ public class UIManager : BaseManager
     private Dictionary<UIPanelType, BasePanel> panelDict;
     private Stack<BasePanel> panelStack;
 
-    public UIManager()
-    {
-        ParseUIPanelTypeJson();
-    }
+    //public UIManager()
+    //{
+    //    ParseUIPanelTypeJson();
+    //}
 
     public void PushPanel(UIPanelType panelType)
     {

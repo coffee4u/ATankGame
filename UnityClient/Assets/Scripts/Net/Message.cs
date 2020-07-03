@@ -32,7 +32,7 @@ using Common;
             startIndex += count;
         }
 
-        public void ReadMessage(int newDataAmount, Action<RequestCode, ActionCode, string> processDataCallback)
+        public void ReadMessage(int newDataAmount, Action<RequestCode, string> processDataCallback)
         {
             startIndex += newDataAmount;
             while (true)
@@ -42,11 +42,10 @@ using Common;
                 if (startIndex - COUNT_LEN >= count)
                 {
                     RequestCode requestCode = (RequestCode)BitConverter.ToInt32(data, 4);
-                    ActionCode actionCode = (ActionCode)BitConverter.ToInt32(data, 8);
 
-                    string s = Encoding.UTF8.GetString(data, COUNT_LEN + Request_code_len + Action_code_len, count - Request_code_len - Action_code_len);
+                    string s = Encoding.UTF8.GetString(data, COUNT_LEN + Request_code_len, count - Request_code_len);
                     Console.WriteLine("Recevied: " + s);
-                    processDataCallback(requestCode, actionCode, s);
+                    processDataCallback(requestCode, s);
 
                     Array.Copy(data, COUNT_LEN + count, data, 0, startIndex - count - COUNT_LEN);
                     startIndex = startIndex - count - COUNT_LEN;
@@ -69,5 +68,16 @@ using Common;
             return dataAmountBytes.Concat(requestCodeBytes).Concat(dataBytes).ToArray<Byte>();
 
         }
+
+    public static byte[] PackData(RequestCode requestCode, ActionCode actionCode, string data)
+    {
+        byte[] requestCodeBytes = BitConverter.GetBytes((int)requestCode);
+        byte[] actionCodeBytes = BitConverter.GetBytes((int)actionCode);
+        byte[] dataBytes = Encoding.UTF8.GetBytes(data);
+        int dataAmount = requestCodeBytes.Length + dataBytes.Length + actionCodeBytes.Length;
+        byte[] dataAmountBytes = BitConverter.GetBytes(dataAmount);
+        return dataAmountBytes.Concat(requestCodeBytes).Concat(actionCodeBytes).Concat(dataBytes).ToArray<Byte>();
+
     }
+}
 

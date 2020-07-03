@@ -8,22 +8,25 @@
       <File FileName="Common/ActionCode.cs" Line="6" Column="14" />
       <File FileName="GameServer/Controller/ControllerManager.cs" />
       <File FileName="GameServer/Controller/DefaultController.cs" />
-      <File FileName="GameServer/Servers/Message.cs" Line="63" Column="10" />
+      <File FileName="GameServer/Servers/Message.cs" />
       <File FileName="GameServer/Tool/ConnHelper.cs" />
-      <File FileName="GameServer/Program.cs" Line="19" Column="39" />
-      <File FileName="Common/RequestCode.cs" Line="1" Column="1" />
+      <File FileName="GameServer/Program.cs" />
+      <File FileName="Common/RequestCode.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ATankGame" expanded="True">
-            <Node name="Common" expanded="True" selected="True" />
+            <Node name="Common" expanded="True">
+              <Node name="ActionCode.cs" selected="True" />
+            </Node>
             <Node name="GameClient" expanded="True">
               <Node name="Properties" expanded="True">
                 <Node name="PublishProfiles" expanded="True" />
               </Node>
             </Node>
             <Node name="GameServer" expanded="True">
+              <Node name="Controller" expanded="True" />
               <Node name="Servers" expanded="True" />
               <Node name="Tool" expanded="True" />
             </Node>
